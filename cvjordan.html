@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mi Currículum</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: #f5f4f0;
+      color: #1a1a1a;
+      min-height: 100vh;
+      padding: 2rem 1rem;
+    }
+
+    .cv {
+      max-width: 780px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 0.5px solid #e0ddd6;
+    }
+
+    .cv-header {
+      background: #0c447c;
+      color: #ffffff;
+      padding: 2.5rem 2.5rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .cv-header img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid rgba(255,255,255,0.3);
+      flex-shrink: 0;
+    }
+
+    .cv-header h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 30px;
+      font-weight: 400;
+      line-height: 1.2;
+    }
+
+    .cv-header .subtitle {
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: 0.75;
+      margin-top: 6px;
+    }
+
+    .cv-body {
+      display: grid;
+      grid-template-columns: 1fr 260px;
+    }
+
+    .cv-main {
+      padding: 2rem 2.5rem;
+      border-right: 0.5px solid #e0ddd6;
+    }
+
+    .cv-sidebar {
+      padding: 2rem 1.5rem;
+      background: #faf9f6;
+    }
+
+    .section { margin-bottom: 2rem; }
+
+    .section-title {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #185fa5;
+      padding-bottom: 6px;
+      border-bottom: 1.5px solid #b5d4f4;
+      margin-bottom: 1.2rem;
+    }
+
+    .datos-grid { display: grid; gap: 10px; }
+
+    .dato { display: flex; flex-direction: column; gap: 2px; }
+
+    .dato label {
+      font-size: 11px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #888;
+    }
+
+    .dato span { font-size: 14px; color: #1a1a1a; }
+
+    .item { margin-bottom: 1.4rem; }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-bottom: 2px;
+    }
+
+    .item-role { font-size: 15px; font-weight: 500; }
+    .item-date { font-size: 12px; color: #888; }
+
+    .item-place {
+      font-size: 13px;
+      color: #185fa5;
+      margin-bottom: 8px;
+    }
+
+    .item ul { padding-left: 1.2rem; }
+
+    .item ul li {
+      font-size: 13px;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 4px;
+    }
+
+    .item p { font-size: 13px; color: #555; line-height: 1.6; }
+
+    .skills-wrap { display: flex; flex-wrap: wrap; gap: 6px; }
+
+    .skill {
+      font-size: 12px;
+      padding: 4px 10px;
+      background: #e6f1fb;
+      color: #0c447c;
+      border-radius: 4px;
+      font-weight: 500;
+    }
+
+    .lang-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .lang-item span { font-size: 13px; }
+    .dots { display: flex; gap: 4px; }
+
+    .dot { width: 9px; height: 9px; border-radius: 50%; }
+    .dot.on { background: #185fa5; }
+    .dot.off { background: #d3d1c7; }
+
+    .badge-curso {
+      display: inline-block;
+      font-size: 11px;
+      padding: 2px 8px;
+      background: #e6f1fb;
+      color: #0c447c;
+      border-radius: 20px;
+      margin-left: 6px;
+      font-weight: 500;
+      vertical-align: middle;
+    }
+
+    @media (max-width: 600px) {
+      .cv-body { grid-template-columns: 1fr; }
+      .cv-main { border-right: none; border-bottom: 0.5px solid #e0ddd6; }
+      .cv-header { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="cv">
+
+  <div class="cv-header">
+    <img src="https://w7.pngwing.com/pngs/178/595/png-transparent-user-profile-computer-icons-login-user-avatars-thumbnail.png" alt="Foto de perfil"/>
+    <div>
+      <h1>Huriel Loyo Jordan</h1>
+      <div class="subtitle">Desarrollador de Software</div>
+    </div>
+  </div>
+
+  <div class="cv-body">
+
+    <div class="cv-main">
+
+      <!-- DATOS PERSONALES -->
+      <div class="section">
+        <div class="section-title">Datos Personales</div>
+        <div class="datos-grid">
+          <div class="dato">
+            <label>Nombre</label>
+            <span>Huriel Loyo Jordan</span>
+          </div>
+          <div class="dato">
+            <label>Correo Electrónico</label>
+            <span>h*****@email.com</span>
+          </div>
+          <div class="dato">
+            <label>Teléfono</label>
+            <span>+502 ****-****</span>
+          </div>
+          <div class="dato">
+            <label>Ubicación</label>
+            <span>Guatemala City, Guatemala</span>
+          </div>
+          <div class="dato">
+            <label>GitHub</label>
+            <span>github.com/hurieljordan-bot</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- EXPERIENCIA LABORAL -->
+      <div class="section">
+        <div class="section-title">Experiencia Laboral</div>
+
+        <div class="item">
+          <div class="item-header">
+            <span class="item-role">Técnico en Reparación de Equipo Telefónico</span>
+          </div>
+          <div class="item-place">Hardware y Software — Guatemala</div>
+          <ul>
+            <li>Diagnóstico y reparación de dispositivos móviles a nivel de hardware y software.</li>
+            <li>Instalación y configuración de sistemas operativos móviles.</li>
+            <li>Atención al cliente y entrega de equipos con garantía de servicio.</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <div class="item-header">
+            <span class="item-role">Mantenimiento de Equipo de Cómputo y Redes</span>
+          </div>
+          <div class="item-place">Hardware, Software y Redes CVV — Guatemala</div>
+          <ul>
+            <li>Mantenimiento preventivo y correctivo de computadoras de escritorio y portátiles.</li>
+            <li>Configuración de redes LAN y cableado estructurado (CVV).</li>
+            <li>Instalación de sistemas operativos, controladores y software de productividad.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- EDUCACIÓN -->
+      <div class="section">
+        <div class="section-title">Educación</div>
+
+        <div class="item">
+          <div class="item-header">
+            <span class="item-role">
+              Técnico en Desarrollo de Software
+              <span class="badge-curso">En curso</span>
+            </span>
+          </div>
+          <div class="item-place">Universidad Galileo — Guatemala</div>
+          <p>Formación en programación, bases de datos, desarrollo web y aplicaciones móviles.</p>
+        </div>
+
+        <div class="item">
+          <div class="item-header">
+            <span class="item-role">Técnico en Reparación de Equipo de Cómputo</span>
+          </div>
+          <div class="item-place">INTECAP — Guatemala</div>
+        </div>
+
+        <div class="item">
+          <div class="item-header">
+            <span class="item-role">Técnico en Educación y Producción Musical</span>
+          </div>
+          <div class="item-place">Instituto Adagio — Guatemala</div>
+        </div>
+
+        <div class="item">
+          <div class="item-header">
+            <span class="item-role">Bachillerato en CC. LL. con Orientación en Música</span>
+          </div>
+          <div class="item-place">ESFAQ — Guatemala</div>
+        </div>
+
+        <div class="item">
+          <div class="item-header">
+            <span class="item-role">PEM en Pedagogía y Administración Educativa</span>
+          </div>
+          <div class="item-place">Guatemala</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- SIDEBAR -->
+    <div class="cv-sidebar">
+
+      <!-- PROYECTOS -->
+      <div class="section">
+        <div class="section-title">Proyectos</div>
+
+        <div class="item">
+          <div class="item-role" style="font-size:14px;">App de Inventario</div>
+          <div class="item-place" style="margin-bottom:4px;">Flutter · Android Studio · Windows</div>
+          <p>Aplicación Android clonada desde repositorio público, modificada con funcionalidades personalizadas y compilada desde cero para uso en negocio propio.</p>
+        </div>
+
+        <div class="item">
+          <div class="item-role" style="font-size:14px;">Proyectos Académicos</div>
+          <div class="item-place" style="margin-bottom:4px;">C · PHP · Python · JavaScript</div>
+          <p>Proyectos desarrollados en distintos lenguajes de programación, usando entornos como Linux, Windows, VS Code, Android Studio y Flutter.</p>
+        </div>
+      </div>
+
+      <!-- HABILIDADES -->
+      <div class="section">
+        <div class="section-title">Habilidades</div>
+        <div class="skills-wrap">
+          <span class="skill">Python (básico)</span>
+          <span class="skill">JavaScript (básico)</span>
+          <span class="skill">C (básico)</span>
+          <span class="skill">PHP (básico)</span>
+          <span class="skill">HTML (básico)</span>
+          <span class="skill">CSS (básico)</span>
+          <span class="skill">Flutter</span>
+          <span class="skill">Git</span>
+          <span class="skill">Linux</span>
+          <span class="skill">Windows</span>
+          <span class="skill">VS Code</span>
+          <span class="skill">Android Studio</span>
+        </div>
+      </div>
+
+      <!-- IDIOMAS -->
+      <div class="section">
+        <div class="section-title">Idiomas</div>
+        <div class="lang-item">
+          <span>Español</span>
+          <div class="dots">
+            <div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div>
+          </div>
+        </div>
+        <div class="lang-item">
+          <span>Inglés técnico</span>
+          <div class="dots">
+            <div class="dot on"></div><div class="dot on"></div><div class="dot off"></div><div class="dot off"></div><div class="dot off"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
