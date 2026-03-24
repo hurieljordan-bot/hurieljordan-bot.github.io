@@ -4,4 +4,4 @@ pagina web donde se presenta la hoja de vida laboral personal, donde en contrara
 
 ## Vista previa
 
-[ver demo] (https://github.com/hurieljordan-bot/hurieljordan.github.io)
+[ver demo] (https://github.com/hurieljordan-bot/hurieljordan-bot.github.io.git)
